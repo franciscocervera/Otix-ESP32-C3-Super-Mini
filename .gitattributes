@@ -1,0 +1,16 @@
+# Normalize text files while preserving platform-specific scripts.
+* text=auto
+
+*.bat text eol=crlf
+gradlew text eol=lf
+
+*.kt text eol=lf
+*.kts text eol=lf
+*.xml text eol=lf
+*.toml text eol=lf
+*.properties text eol=lf
+*.md text eol=lf
+*.ino text eol=lf
+
+*.jar binary
+*.webp binary

@@ -1,0 +1,72 @@
+<resources>
+    <style name="Theme.Otix" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryDark">@color/bg_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="materialButtonStyle">@style/Widget.Otix.Button</item>
+    </style>
+
+    <style name="Widget.Otix.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/accent_dark</item>
+        <item name="rippleColor">@color/accent</item>
+    </style>
+
+    <style name="Widget.Otix.DirectionButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">76dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="backgroundTint">@color/accent_dark</item>
+        <item name="cornerRadius">38dp</item>
+        <item name="iconGravity">textTop</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">38dp</item>
+        <item name="iconTint">@color/text_primary</item>
+        <item name="rippleColor">@color/accent</item>
+        <item name="strokeColor">@color/stroke</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+
+    <style name="Widget.Otix.StopButton" parent="Widget.Otix.DirectionButton">
+        <item name="backgroundTint">@color/danger</item>
+        <item name="iconTint">@color/text_primary</item>
+        <item name="iconSize">30dp</item>
+        <item name="strokeColor">@color/danger_dark</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Widget.Otix.SpeedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">54dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/accent_dark</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="strokeColor">@color/accent</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Otix.TimerButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">52dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/accent_dark</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+</resources>

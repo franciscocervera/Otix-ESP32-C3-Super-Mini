@@ -1,0 +1,43 @@
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+
+# Gradle and Kotlin caches
+.gradle/
+.kotlin/
+**/build/
+
+# Local machine configuration
+local.properties
+
+# Native build output
+.externalNativeBuild/
+.cxx/
+
+# Android build artifacts
+*.apk
+*.aab
+*.ap_
+/captures/
+/release/
+
+# Signing and secrets
+*.jks
+*.keystore
+key.properties
+secrets.properties
+.env
+.env.*
+
+# JVM diagnostics and logs
+*.hprof
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor temporary files
+*~
+*.swp
+*.swo

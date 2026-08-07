@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="108dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="OTIX"
+                android:textColor="@color/text_primary"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Robot OTIX"
+                            android:textColor="@color/text_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtConnectionState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_chip_idle"
+                            android:gravity="center"
+                            android:minWidth="104dp"
+                            android:paddingStart="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="8dp"
+                            android:text="Desconectado"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:minHeight="38dp"
+                        android:text="Pulsa Conectar para buscar el robot OTIX"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnConnect"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:text="Conectar"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/accent_dark"
+                            app:cornerRadius="16dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDisconnect"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="Desconectar"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/danger_dark"
+                            app:cornerRadius="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVoice"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_weight="1"
+                    android:text="Comando de voz"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/blue_action"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchGyroscope"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_action_switch"
+                    android:gravity="center"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="10dp"
+                    android:text="Giroscopio"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    app:thumbTint="@color/switch_thumb"
+                    app:trackTint="@color/switch_track" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Usa el botón Ayuda para ver comandos de voz y modos disponibles"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDemoStart"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:text="Encender demo"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/cyan_action"
+                    app:cornerRadius="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDemoStop"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Apagar demo"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/mint_action"
+                    app:cornerRadius="16dp" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/txtMovement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip_idle"
+                        android:gravity="center"
+                        android:minWidth="180dp"
+                        android:paddingStart="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="14dp"
+                        android:paddingBottom="8dp"
+                        android:text="Detenido"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnForwardLeft"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Adelante izquierda"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_up_left" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnForward"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Adelante"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_up" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnForwardRight"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Adelante derecha"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_up_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLeft"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Izquierda"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_left" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStop"
+                            style="@style/Widget.Otix.StopButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Detener"
+                            android:text=""
+                            app:icon="@drawable/ic_stop" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRight"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Derecha"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBackwardLeft"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Atrás izquierda"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_down_left" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBackward"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Atrás"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_down" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnBackwardRight"
+                            style="@style/Widget.Otix.DirectionButton"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:contentDescription="Atrás derecha"
+                            android:text=""
+                            app:icon="@drawable/ic_arrow_down_right" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Velocidad"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/speedGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:checkedButton="@id/btnMedium"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSlow"
+                    style="@style/Widget.Otix.SpeedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Lento" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMedium"
+                    style="@style/Widget.Otix.SpeedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Medio" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFast"
+                    style="@style/Widget.Otix.SpeedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Rápido" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Temporizador"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textColor="@color/accent"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/pickerHours"
+                    android:layout_width="0dp"
+                    android:layout_height="112dp"
+                    android:layout_weight="1"
+                    android:descendantFocusability="blocksDescendants" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/text_primary"
+                    android:textSize="28sp" />
+
+                <NumberPicker
+                    android:id="@+id/pickerMinutes"
+                    android:layout_width="0dp"
+                    android:layout_height="112dp"
+                    android:layout_weight="1"
+                    android:descendantFocusability="blocksDescendants" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="@color/text_primary"
+                    android:textSize="28sp" />
+
+                <NumberPicker
+                    android:id="@+id/pickerSeconds"
+                    android:layout_width="0dp"
+                    android:layout_height="112dp"
+                    android:layout_weight="1"
+                    android:descendantFocusability="blocksDescendants" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTimerStart"
+                    style="@style/Widget.Otix.TimerButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Iniciar" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTimerStop"
+                    style="@style/Widget.Otix.TimerButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Detener" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTimerReset"
+                    style="@style/Widget.Otix.TimerButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Reiniciar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="18dp"
+        android:contentDescription="Ayuda"
+        android:text="Ayuda"
+        android:textColor="@color/text_primary"
+        app:backgroundTint="@color/surface_alt"
+        app:icon="@drawable/ic_help_outline"
+        app:iconTint="@color/text_primary" />
+
+</FrameLayout>
